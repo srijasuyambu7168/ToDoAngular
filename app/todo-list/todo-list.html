@@ -1,0 +1,20 @@
+<section class="todo-app">
+  <app-add-todo (add)="onAdd($event)"></app-add-todo>
+
+  <div *ngIf="todos.length === 0">No todos yet — add one!</div>
+
+  <div *ngIf="todos.length > 0">
+    <app-todo-item
+      *ngFor="let t of todos"
+      [todo]="t"
+      (toggle)="onToggle($event)"
+      (delete)="onDelete($event)"
+      (edit)="onEdit($event)">
+    </app-todo-item>
+
+    <div class="footer">
+      <small>{{ todos.length }} items</small>
+      <button (click)="clearCompleted()">Clear completed</button>
+    </div>
+  </div>
+</section>

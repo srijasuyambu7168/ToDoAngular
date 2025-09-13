@@ -1,0 +1,7 @@
+.add-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.add-form input { flex: 1; padding: 8px; }
+.add-form button { padding: 8px 12px; }
